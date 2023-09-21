@@ -14,6 +14,13 @@ class TestStack(unittest.TestCase):
 
         self.assertTrue(Node(3))
 
+    def test_str(self):
+        stack = Stack()
+        stack.push('data1')
+        stack.push('data2')
+
+        self.assertEqual(str(stack), 'data2 data1')
+
 
 if __name__ == '__main__':
     unittest.main()

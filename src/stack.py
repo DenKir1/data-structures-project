@@ -19,6 +19,14 @@ class Stack(Node):
         self.count = 0
         self.top = None
 
+    def __str__(self):
+        n = self.top
+        result = []
+        while n:
+            result.append(n.data)
+            n = n.next_node
+        return " ".join(result)
+
     def push(self, data):
         """
         Метод для добавления элемента на вершину стека
@@ -30,7 +38,6 @@ class Stack(Node):
         node.next_node = self.top
         self.top = node
         self.count += 1
-
 
     def pop(self):
         """
